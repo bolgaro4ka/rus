@@ -1,13 +1,13 @@
 import os
 import argparse
-'''
+
 parser=argparse.ArgumentParser()
 parser.add_argument("файл", type=str)
 
 args=parser.parse_args()
-'''
 
-with open('тест.русь', 'r', encoding='utf-8') as file:
+
+with open(args.файл, 'r', encoding='utf-8') as file:
     code = file.read()
 
     commands = {'промолвить': 'print',
@@ -15,27 +15,29 @@ with open('тест.русь', 'r', encoding='utf-8') as file:
                 'отнюдь': 'else',
                 'целина': 'int',
                 'внемлить': 'input',
-                'список': 'list',
+                'списокъ': 'list',
                 'перепись': 'dict',
-                'бить_ящеров': 'break',
-                'добить_ящеров': 'continue',
+                'бить_ящеровъ': 'break',
+                'добить_ящеровъ': 'continue',
                 'правда': 'true',
                 'кривда': 'false',
                 'казнь': 'del',
                 'воздать': 'return',
                 'внедрить': 'import',
-                'получи_басурман': 'raise',
+                'получи_басурманъ': 'raise',
                 'пытать_ящера': 'try',
                 'поймать_ящера': 'except',
                 'народный': 'global',
                 'царский': 'nonlocal',
-                'хутор': 'def',
-                'много_букав': 'str',
+                'хуторъ': 'def',
+                'много_букавъ': 'str',
                 'мерило': 'len',
-                'розсуд': 'bool',
+                'розсудъ': 'bool',
                 'дробь': 'float',
-                'из': 'from'
-
+                'изъ': 'from',
+                'для':'for',
+                'въ': 'in',
+                'перебрать': 'range'
                 }
     new_code=code
 
